@@ -13,9 +13,9 @@ public class Chatbot
 		this.chatbotName = chatbotName;
 		this.username = "";
 		
-		
 	}
 	public String processText(String input)
+
 	{
 		
 		String output = input;
@@ -25,4 +25,57 @@ public class Chatbot
 		return output;
 	
 	}
+	
+	
+	
+	
+	private Boolean spookyChecker(String sentence)
+	{
+		
+		Boolean isSpooky = false;
+		
+		
+		
+		
+		return isSpooky;
+	}
+	 
+	private String spookyResponse()
+	 {
+		 String Response = "";
+		 
+		 
+		 
+		 
+		 
+		 return Response;
+	 }
+	
+	private Boolean isValidHTMLChecker(String valid)
+	 {
+		 Boolean isValid = false;
+		 
+		 
+		 return isValid;
+	 }
+	 
+	private String isValidHTMLResponse()
+	 {
+		 String HTMLResponse = "";
+		 
+		 
+		 
+		 return HTMLResponse;
+	 }
+	 
+	private String reversePronounDirection(String reversed)
+	 {
+		 String reverse = "";
+		 
+		 
+		 
+		 return reverse;
+	 }
+	 
+	
 }
