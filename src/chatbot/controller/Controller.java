@@ -29,7 +29,7 @@ public class Controller
 	{
 		
 		String chatbotResponse = interactWithChatbot(userText);
-		view.displayMessage("you said " + chatbotResponse);
+		view.displayMessage("You said " + chatbotResponse);
 		
 		userText = keyboardInput.nextLine();
 		
