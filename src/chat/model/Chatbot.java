@@ -70,7 +70,7 @@ public class Chatbot
 	 
 	private String reversePronounDirection(String input)
 	 {
-		 String output = input.replace("I ", "You ");
+		 String output = input.replace("I ", "you ");
 		 
 		 
 		 
