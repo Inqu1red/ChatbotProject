@@ -32,9 +32,10 @@ public class Controller
 		
 		
 		
-		view.displayMessage("Goodbye!");
+		
 	}
 	
+	view.displayMessage("Goodbye!");
 		
 	}
 	
