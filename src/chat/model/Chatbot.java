@@ -6,6 +6,7 @@ public class Chatbot
 	
 	private String username;
 	private String chatbotName;
+	
 	public Chatbot(String chatbotName)
 	{
 		
@@ -19,7 +20,12 @@ public class Chatbot
 		
 		String output = reversePronounDirection(input);
 		
-		
+		if (spookyChecker(input))
+		{
+			output += "\n" + spookyResponse() + "\n"; 
+			
+			
+		}
 		
 		return output;
 	
@@ -33,8 +39,32 @@ public class Chatbot
 		
 		Boolean isSpooky = false;
 		
+		ArrayList<String> spookyThings = new ArrayList<String>();
+		
+		spookyThings.add("Spiders");
+		spookyThings.add("Scarecrows");
+		spookyThings.add("Blood");
+		spookyThings.add("Horror Movies");
+		spookyThings.add("Ghosts");
+		spookyThings.add("Mummies");
+		spookyThings.add("Werewolves");
+		spookyThings.add("Zombies");
+		spookyThings.add("Trypophobia");
+		spookyThings.add("Halloween");
 		
 		
+		for(String phrase : spookyThings)
+		{
+			if (sentence.toUpperCase().indexOf( phrase.toUpperCase()) >= 0)
+			{
+				isSpooky = true;
+				
+				
+			}
+			
+			
+			
+		}
 		
 		return isSpooky;
 	}
