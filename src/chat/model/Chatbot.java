@@ -18,7 +18,7 @@ public class Chatbot
 
 	{
 		
-		String output = input;
+		String output = reversePronounDirection(input);
 		
 		
 		
@@ -42,7 +42,7 @@ public class Chatbot
 	 
 	private String spookyResponse()
 	 {
-		 String Response = "";
+		 String Response = "thats pretty spooky!";
 		 
 		 
 		 
@@ -68,13 +68,13 @@ public class Chatbot
 		 return HTMLResponse;
 	 }
 	 
-	private String reversePronounDirection(String reversed)
+	private String reversePronounDirection(String input)
 	 {
-		 String reverse = "";
+		 String output = input.replace("I ", "You ");
 		 
 		 
 		 
-		 return reverse;
+		 return output;
 	 }
 	 
 	

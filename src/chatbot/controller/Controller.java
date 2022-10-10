@@ -1,17 +1,18 @@
 package chatbot.controller;
 import chat.model.Chatbot;
+import chat.view.Popup;
 import java.util.Scanner;
-import chat.vew.Popup;
 public class Controller
 {
  
 	private Chatbot chatbot;
 	private Scanner keyboardInput;
-	
+	private Popup view;
 	public Controller()
 	{
 		this.keyboardInput = new Scanner(System.in);
 		this.chatbot = new Chatbot("Super smart chatbot");
+		this.view = new Popup();
 		
 	}
 
@@ -19,10 +20,8 @@ public class Controller
 	
 	public void start()
 	{
-	
-	System.out.println("What do you want to say to the chatbot?");
-	
-	String userText = keyboardInput.nextLine();
+
+	String userText = view.askQuestion("What would you like to say to chatbot? ");
 	
 
 	
@@ -30,8 +29,7 @@ public class Controller
 	{
 		
 		String chatbotResponse = interactWithChatbot(userText);
-		System.out.println("Chatbot Says: ");
-		System.out.println(chatbotResponse);
+		view.displayMessage("you said " + chatbotResponse);
 		
 		userText = keyboardInput.nextLine();
 		
