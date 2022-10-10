@@ -71,13 +71,20 @@ public class Chatbot
 	 
 	private String spookyResponse()
 	 {
-		 String Response = "thats pretty spooky!";
+		 String Response = "";
+		 ArrayList<String> spookyResponses = new ArrayList<String>();
+		 spookyResponses.add("woah thats spooky!");
+		 spookyResponses.add("scary!!!");
+		 spookyResponses.add("I love that! Spooky");
+		 spookyResponses.add("Creepy dude");
+		 spookyResponses.add("Bro that's super creepy");
 		 
+		 int randomSpot = (int) (Math.random() * spookyResponses.size()  );
 		 
-		 
-		 
+		 Response = spookyResponses.get(randomSpot);
 		 
 		 return Response;
+		 
 	 }
 	
 	private Boolean isValidHTMLChecker(String valid)
