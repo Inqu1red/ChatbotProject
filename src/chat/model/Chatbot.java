@@ -1,12 +1,11 @@
 package chat.model;
-
+import java.util.ArrayList;
 public class Chatbot
 {
 	
 	
 	private String username;
 	private String chatbotName;
-	
 	public Chatbot(String chatbotName)
 	{
 		

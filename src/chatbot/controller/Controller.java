@@ -1,18 +1,19 @@
 package chatbot.controller;
 import chat.model.Chatbot;
 import chat.view.Popup;
-
+import java.util.ArrayList;
 public class Controller
 {
  
 	private Chatbot chatbot;
-
+	public ArrayList<String> spookyThings;
 	private Popup view;
 	public Controller()
 	{
 		
 		this.chatbot = new Chatbot("Super smart chatbot");
 		this.view = new Popup();
+		this.spookyThings = new ArrayList<String>();
 		
 	}
 
@@ -20,7 +21,16 @@ public class Controller
 	
 	public void start()
 	{
-
+	
+	spookyThings.add("Spiders");
+	spookyThings.add("Scarecrows");
+	spookyThings.add("Blood");
+	spookyThings.add("Horror Movies");
+	spookyThings.add("Ghosts");
+	spookyThings.add("Mummies");
+	spookyThings.add("Werewolves");
+	spookyThings.add("Zombies");
+	spookyThings.add("Trypophobia");
 	String userText = view.askQuestion("What would you like to say to chatbot? ");
 	
 
