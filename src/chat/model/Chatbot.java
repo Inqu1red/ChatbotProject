@@ -161,18 +161,43 @@ public class Chatbot
 		
 		return wantsJoke;
 	}
+	
 	private String groanJokeResponse()
 	{
 		String joke = "";
 		ArrayList<String> jokes = new ArrayList<String>();
 		jokes.add("Why did the chicken cross the road?" + "\n" + "to get to the other side!");
-		
+		jokes.add("What do you call a ");
 		int randomSpot = (int) (Math.random() * jokes.size() );
 		
 		joke = jokes.get(randomSpot);
 		
 		return joke;
 	}
+	
+	private Boolean tellFunFact(String facts)
+	{
+		
+	Boolean wantsFact = false;
+			
+	ArrayList<String> factAsk = new ArrayList<>();
+			
+			
+			
+	return wantsFact;
+		
+	}
+	
+	private boolean computerScienceChecker(String computerFacts)
+	{
+		Boolean wantsComputerFact = false;
+		
+		
+		return wantsComputerFact;
+	}
+	
+	
+	
 	
 	
 }
