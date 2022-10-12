@@ -167,7 +167,13 @@ public class Chatbot
 		String joke = "";
 		ArrayList<String> jokes = new ArrayList<String>();
 		jokes.add("Why did the chicken cross the road?" + "\n" + "to get to the other side!");
-		jokes.add("What do you call a ");
+		jokes.add("Wanna hear a really long joke?" + "\n" + "jooooooooooke");
+		jokes.add("Whats the secret to a great elevator pitch?" + "\n" + "it works on many levels");
+		jokes.add("What does a house wear to a party?" + "/n" + "adress");
+		jokes.add("Have you heard how popular the cemetary is?" + "\n" + "people are just dying to get in!");
+		jokes.add("Kid: I'll call you later!" + "\n" + "later: just call me dad!");
+		jokes.add("When does a joke become a dad joke?" + "\n" + "When the punchline become apparent!");
+		
 		int randomSpot = (int) (Math.random() * jokes.size() );
 		
 		joke = jokes.get(randomSpot);
@@ -181,9 +187,9 @@ public class Chatbot
 	Boolean wantsFact = false;
 			
 	ArrayList<String> factAsk = new ArrayList<>();
-			
-			
-			
+	factAsk.add("Tell me a fun fact");
+	factAsk.add("Can you tell me a fact?");
+	factAsk.add("Please tell me a fact");		
 	return wantsFact;
 		
 	}
