@@ -26,6 +26,21 @@ public class Chatbot
 			
 			
 		}
+		if(isValidHTMLChecker(input))
+		{
+			output += "\n" + isValidHTMLResponse() + "\n" ;
+		}
+		else
+		{
+			output += "\n" + "No HTML here " + "\n";
+			
+		}
+		if (tellGroanJoke(input))
+		{
+			
+			output += "\n" + groanJokeResponse() + "\n";
+		}
+		
 		
 		return output;
 	
@@ -90,17 +105,27 @@ public class Chatbot
 	private Boolean isValidHTMLChecker(String valid)
 	 {
 		 Boolean isValid = false;
-		 
+		 if (!valid.contains(" < " ))
+		 {
+			 isValid = true;
+			 
+			 return isValid;
+			 
+		 }
+		 else
+		 {
+			 isValid = false;
+		 }
 		 
 		 return isValid;
 	 }
 	 
 	private String isValidHTMLResponse()
 	 {
+		
 		 String HTMLResponse = "";
-		 
-		 
-		 
+	
+		
 		 return HTMLResponse;
 	 }
 	 
@@ -113,5 +138,41 @@ public class Chatbot
 		 return output;
 	 }
 	 
+	private Boolean tellGroanJoke(String request)
+	{
+		Boolean wantsJoke = false;
+				
+		ArrayList<String> jokeAsk = new ArrayList<String>();
+		jokeAsk.add("Tell me a joke");
+		jokeAsk.add("Can you tell me a joke?");
+		jokeAsk.add("Please tell me a joke");
+		
+		for(String joked : jokeAsk)
+		{
+			
+			if(request.toUpperCase().indexOf( joked.toUpperCase()) >= 0)
+			{
+				wantsJoke = true;
+				
+			}
+			
+		}
+		
+		
+		return wantsJoke;
+	}
+	private String groanJokeResponse()
+	{
+		String joke = "";
+		ArrayList<String> jokes = new ArrayList<String>();
+		jokes.add("Why did the chicken cross the road?" + "\n" + "to get to the other side!");
+		
+		int randomSpot = (int) (Math.random() * jokes.size() );
+		
+		joke = jokes.get(randomSpot);
+		
+		return joke;
+	}
+	
 	
 }
