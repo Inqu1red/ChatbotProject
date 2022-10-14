@@ -166,11 +166,11 @@ public class Chatbot
 		jokes.add("Why did the chicken cross the road?" + "\n" + "to get to the other side!");
 		jokes.add("Wanna hear a really long joke?" + "\n" + "jooooooooooke");
 		jokes.add("Whats the secret to a great elevator pitch?" + "\n" + "it works on many levels");
-		jokes.add("What does a house wear to a party?" + "/n" + "adress");
+		jokes.add("What does a house wear to a party?" + "\n" + " address");
 		jokes.add("Have you heard how popular the cemetary is?" + "\n" + "people are just dying to get in!");
 		jokes.add("Kid: I'll call you later!" + "\n" + "later: just call me dad!");
 		jokes.add("When does a joke become a dad joke?" + "\n" + "When the punchline become apparent!");
-		
+		jokes.add("I'm worried for the calendar..." + "\n" + "Its days are numbered");
 		int randomSpot = (int) (Math.random() * jokes.size() );
 		
 		joke = jokes.get(randomSpot);
