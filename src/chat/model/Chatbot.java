@@ -104,18 +104,15 @@ public class Chatbot
 	
 	private Boolean isValidHTMLChecker(String valid)
 	 {
-		 Boolean isValid = false;
-		 if (!valid.contains(" < " ))
+		 Boolean isValid = true;
+		 if (!valid.contains("<" ))
 		 {
-			 isValid = true;
+			 isValid = false;
 			 
 			 return isValid;
 			 
 		 }
-		 else
-		 {
-			 isValid = false;
-		 }
+		 
 		 
 		 return isValid;
 	 }
@@ -123,7 +120,7 @@ public class Chatbot
 	private String isValidHTMLResponse()
 	 {
 		
-		 String HTMLResponse = "";
+		 String HTMLResponse = "HTML Is Valid";
 	
 		
 		 return HTMLResponse;
