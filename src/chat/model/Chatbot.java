@@ -224,7 +224,7 @@ public class Chatbot
 		return tellFact;
 	}
 
-	private boolean computerScienceChecker(String computerFacts)
+	private Boolean computerScienceChecker(String computerFacts)
 	{
 		Boolean wantsComputerFact = false;
 		
@@ -242,5 +242,12 @@ public class Chatbot
 		
 		return wantsComputerFact;
 	}
-
+	
+	private String computerScienceFacts()
+	{
+		String computerFacts = "";
+		
+		
+		return computerFacts;
+	}
 }
