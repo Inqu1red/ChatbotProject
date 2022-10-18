@@ -41,6 +41,13 @@ public class Chatbot
 
 			output += "\n" + groanJokeResponse() + "\n";
 		}
+		if (tellFunFact(input))
+		{
+			
+			
+			output += "\n" + funFacts() + "\n";
+			
+		}
 
 		return output;
 
@@ -177,24 +184,43 @@ public class Chatbot
 		factAsk.add("Tell me a fun fact");
 		factAsk.add("Can you tell me a fact?");
 		factAsk.add("Please tell me a fact");
+		
+		for (String requested : factAsk)
+		{
+
+			if (facts.toUpperCase().indexOf(requested.toUpperCase()) >= 0)
+			{
+				wantsFact = true;
+
+			}
+
+		}
 		return wantsFact;
 
 	}
 
-	private String funFacts(String fact)
+	private String funFacts()
 	{
 		String tellFact = "";
 		ArrayList<String> facts = new ArrayList<>();
 		facts.add("Did you know that dolphins are actually really mean?");
 		facts.add("Did you know that a group of crows is called a murder?");
-		facts.add("Did you know that ");
-		facts.add("");
-		facts.add("");
-		facts.add("");
-		facts.add("");
-		facts.add("");
-		facts.add("");
-		facts.add("");
+		facts.add("Did you know that orange (the color) was actually named after the fruit?");
+		facts.add("Did you know that chinchilla fur is so dense that they can't get wet? "
+				+ "If they do, their fur will grow mold");
+		facts.add("Did you know that their are more atoms in a cup of water than cups of water in all the oceans?");
+		facts.add("Did you know that Strawberries and Rasberries aren't technically berries?");
+		facts.add("Did you know that the air in chip bags is there to prevent them from going stale?");
+		facts.add("If you drop a penny off the Empire State building and it hits someone, it will not "
+				+ "kill them, which is a common misconception ");
+		facts.add("It took us longer to go from copper swords to steal swords than it took to go"
+				+ " from steal swords to nuclear bombs");
+		facts.add("Did you know that 1 in 5,000 atlantic lobsters are born bright blue?");
+		
+		
+		int randomSpot = (int) (Math.random() * facts.size());
+		
+		tellFact = facts.get(randomSpot);
 		return tellFact;
 	}
 
