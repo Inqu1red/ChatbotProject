@@ -41,12 +41,17 @@ public class Chatbot
 
 			output += "\n" + groanJokeResponse() + "\n";
 		}
-		if (tellFunFact(input))
+		if (tellRandomFact(input))
 		{
 			
 			
-			output += "\n" + funFacts() + "\n";
+			output += "\n" + funFactList() + "\n";
 			
+		}
+		if (computerScienceChecker(input))
+		{
+			
+			output += "\n" + computerScienceResponse() + "\n"; 
 		}
 
 		return output;
@@ -178,7 +183,7 @@ public class Chatbot
 		return joke;
 	}
 
-	private Boolean tellFunFact(String facts)
+	private Boolean tellRandomFact(String facts)
 	{
 
 		Boolean wantsFact = false;
@@ -202,7 +207,7 @@ public class Chatbot
 
 	}
 
-	private String funFacts()
+	private String funFactList()
 	{
 		String tellFact = "";
 		ArrayList<String> facts = new ArrayList<>();
@@ -246,7 +251,7 @@ public class Chatbot
 		return wantsComputerFact;
 	}
 	
-	private String computerScienceFacts()
+	private String computerScienceResponse()
 	{
 		String computerFacts = "";
 		
