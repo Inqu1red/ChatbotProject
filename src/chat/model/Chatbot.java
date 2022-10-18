@@ -227,7 +227,19 @@ public class Chatbot
 	private boolean computerScienceChecker(String computerFacts)
 	{
 		Boolean wantsComputerFact = false;
-
+		
+		ArrayList<String> computerAsk = new ArrayList<>();
+		computerAsk.add("Tell me something about computers");
+		computerAsk.add("Can you tell me something about computers?");
+		
+		for(String compAsked : computerAsk)
+		{
+			if (computerFacts.toUpperCase().indexOf(compAsked.toUpperCase()) >= 0)
+			{
+				wantsComputerFact = true;
+			}
+		}
+		
 		return wantsComputerFact;
 	}
 
