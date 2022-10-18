@@ -58,7 +58,7 @@ public class Chatbot
 
 	}
 
-	private Boolean spookyChecker(String sentence)
+	private boolean spookyChecker(String sentence)
 	{
 
 		Boolean isSpooky = false;
@@ -107,7 +107,7 @@ public class Chatbot
 
 	}
 
-	private Boolean isValidHTMLChecker(String valid)
+	private boolean isValidHTMLChecker(String valid)
 	{
 		Boolean isValid = true;
 		if (!valid.contains("<"))
@@ -141,7 +141,7 @@ public class Chatbot
 		return output;
 	}
 
-	private Boolean tellGroanJoke(String request)
+	private boolean tellGroanJoke(String request)
 	{
 		Boolean wantsJoke = false;
 
@@ -183,7 +183,7 @@ public class Chatbot
 		return joke;
 	}
 
-	private Boolean tellRandomFact(String facts)
+	private boolean tellRandomFact(String facts)
 	{
 
 		Boolean wantsFact = false;
@@ -232,7 +232,7 @@ public class Chatbot
 		return tellFact;
 	}
 
-	private Boolean computerScienceChecker(String computerFacts)
+	private boolean computerScienceChecker(String computerFacts)
 	{
 		Boolean wantsComputerFact = false;
 		

@@ -1,4 +1,4 @@
-package chatbot.controller;
+package chat.controller;
 import chat.model.Chatbot;
 import chat.view.Popup;
 import java.util.ArrayList;
