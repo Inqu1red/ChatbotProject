@@ -107,12 +107,15 @@ public class Chatbot
 		Boolean isValid = true;
 		if (!valid.contains("<"))
 		{
-			isValid = false;
-
-			return isValid;
+			if (!valid.contains(">"))
+			{
+				isValid = false;
+			}
 
 		}
+		
 
+		
 		return isValid;
 	}
 
