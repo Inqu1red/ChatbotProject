@@ -239,7 +239,14 @@ public class Chatbot
 		ArrayList<String> computerAsk = new ArrayList<>();
 		computerAsk.add("Tell me something about computers");
 		computerAsk.add("Can you tell me something about computers?");
-		
+		computerAsk.add("What can you tell me about computers?");
+		computerAsk.add("Tell me something about computer science");
+		computerAsk.add("Can you tell me something interesting about computer science?");
+		computerAsk.add("Please tell me something about computers");
+		computerAsk.add("Please tell me something about computer science");
+		computerAsk.add("Tell me a fact about computers");
+		computerAsk.add("Tell me a fact about computer science");
+		computerAsk.add("Is there anything interesting about computer science you can tell me?");
 		for(String compAsked : computerAsk)
 		{
 			if (computerFacts.toUpperCase().indexOf(compAsked.toUpperCase()) >= 0)
@@ -253,9 +260,20 @@ public class Chatbot
 	
 	private String computerScienceResponse()
 	{
-		String computerFacts = "";
+		String computerFact = "";
 		
+		ArrayList<String> computerFacts = new ArrayList<>();
+			computerFacts.add("A 64 bit number contains 18.4 quintillion possible values!");
+			computerFacts.add("The computers that put the first man on the moon only had 4kb of ram! "
+					+ "Nowdays, that feels like practically nothing");
+			computerFacts.add("The quifax hack that took place a few years ago affected over 40% of the U.S population");
+			computerFacts.add("About 90% of the worlds currencty is digital, physical money is slowly getting phased out");
+			computerFacts.add("Every month, around 5,000 new computer viruses are developed");
 		
-		return computerFacts;
+			int randomSpot = (int) (Math.random() * computerFacts.size());
+			
+			computerFact = computerFacts.get(randomSpot);
+					
+		return computerFact;
 	}
 }
