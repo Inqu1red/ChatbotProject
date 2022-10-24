@@ -168,7 +168,7 @@ public class Chatbot
 	{
 		String joke = "";
 		ArrayList<String> jokes = new ArrayList<String>();
-		jokes.add("Why did the chicken cross the road?" + "\n" + "to get to the other side!");
+		jokes.add("A man walks into a bar" + "\n" + "ow that hurt!");
 		jokes.add("Wanna hear a really long joke?" + "\n" + "jooooooooooke");
 		jokes.add("Whats the secret to a great elevator pitch?" + "\n" + "it works on many levels");
 		jokes.add("What does a house wear to a party?" + "\n" + " address");
@@ -266,7 +266,7 @@ public class Chatbot
 			computerFacts.add("A 64 bit number contains 18.4 quintillion possible values!");
 			computerFacts.add("The computers that put the first man on the moon only had 4kb of ram! "
 					+ "Nowdays, that feels like practically nothing");
-			computerFacts.add("The quifax hack that took place a few years ago affected over 40% of the U.S population");
+			computerFacts.add("The equifax hack that took place a few years ago affected over 40% of the U.S population");
 			computerFacts.add("About 90% of the worlds currencty is digital, physical money is slowly getting phased out");
 			computerFacts.add("Every month, around 5,000 new computer viruses are developed");
 		
