@@ -107,18 +107,32 @@ public class Chatbot
 
 	}
 
-	private boolean isValidHTMLChecker(String valid)
+	private boolean isValidHTMLChecker(String phrase)
 	{
 		Boolean isValid = true;
-		if (!valid.contains("<"))
+		if (!phrase.contains("<") || !phrase.contains(">"))
 		{
-			if (!valid.contains(">"))
-			{
+			
 				isValid = false;
-			}
+			
 
 		}
-		
+		else
+		{
+			int openTagStartIndex = phrase.indexOf("<");
+			int openTagEndIndex = phrase.indexOf(">");
+			if (openTagStartIndex > openTagEndIndex)
+			{
+				String keyword = phrase.substring(openTagStartIndex + 1, openTagEndIndex);
+				int closeTagStartIndex = phrase.indexOf("</");
+				int closeTagEndIndex = phrase.indexOf(">", closeTagStartIndex);
+				if (closeTagStartIndex > openTagStartIndex  && closeTagEndIndex > openTagEndIndex)
+				{
+					String closingKeyword = phrase.substring(closeTagStartIndex + 2, closeTagEndIndex);
+					
+				}
+			}
+		}
 
 		
 		return isValid;
