@@ -129,7 +129,7 @@ public class Chatbot
 				int closeTagStartIndex = phrase.indexOf("</");
 				int closeTagEndIndex = phrase.indexOf(">", closeTagStartIndex);
 				
-				if (closeTagStartIndex > openTagStartIndex && closeTagEndIndex > openTagEndIndex)
+				if (closeTagStartIndex > openTagEndIndex && closeTagEndIndex > closeTagStartIndex)
 				{
 					String closingKeyword = phrase.substring(closeTagStartIndex + 2, closeTagEndIndex);
 					
