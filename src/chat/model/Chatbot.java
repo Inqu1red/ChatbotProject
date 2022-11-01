@@ -109,7 +109,8 @@ public class Chatbot
 
 	private boolean isValidHTMLChecker(String phrase)
 	{
-		Boolean isValid = false;
+		boolean isValid = false;
+		
 		if (!phrase.contains("<") && !phrase.contains(">"))
 		{
 			
@@ -120,6 +121,7 @@ public class Chatbot
 		{
 			int openTagStartIndex = phrase.indexOf("<");
 			int openTagEndIndex = phrase.indexOf(">", openTagStartIndex);
+			
 			if (openTagStartIndex < openTagEndIndex)
 			{
 				String keyword = phrase.substring(openTagStartIndex + 1, openTagEndIndex);
