@@ -7,53 +7,92 @@ public class Chatbot
 
 	private String username;
 	private String chatbotName;
-
+	private String [] chatTopics;
 	public Chatbot(String chatbotName)
 	{
 
 		this.chatbotName = chatbotName;
 		this.username = "";
-
+		loadTopics();
 	}
 
+	private void loadTopics()	
+	{
+		String topicOne = "Sushi is awesome, you should try it";
+		String topicTwo = "The color orange was actually named after the fruit";
+		String topicThree = "What's are skill you have that isn't very conventional?";
+		String topicFour = "My favorite book is 'Misery' by Stephen King, whats yours?";
+		String topicFive = "The HTML Checker on this bot was the most frustrating thing I've ever tried to write, and I still don't think it works correctly!";
+		String topicSix = "I prefer cats over dogs, do you agree?";
+		String topicSeven = "Elon Musk bought twitter, what's your thoughts on that?";
+		String topicEight = "If you had to pick a food to eat for the rest of your life, what would it be?";
+		String topicNine = "I hate math with a passion this year, what was/is your least favorite class in school?";
+		String topicTen = "If you drop a brick off the empire state building and it hit someone, it would probably do permanent damage/kill them. fun!";
+	
+		this.chatTopics = new String [] {topicOne, topicTwo, topicThree, topicFour, topicFive, topicSix, topicSeven, topicEight, topicNine, topicTen};
+	}
+	
 	public String processText(String input)
 
 	{
 
-		String output = reversePronounDirection(input);
+		String output = "";
+		int randomMethod = (int) (Math.random() * 6);
+		if (randomMethod == 0)
+		{
+			output = reversePronounDirection(input);
+		}
+		else if (randomMethod == 1)
+		{
+			if (spookyChecker(input))
+			{
+				output += "\n" + spookyResponse() + "\n";
 
-		if (spookyChecker(input))
+			}
+		}
+		else if (randomMethod == 2 )
 		{
-			output += "\n" + spookyResponse() + "\n";
+			if (isValidHTMLChecker(input))
+			{
+				output += "\n" + isValidHTMLResponse() + "\n";
+			}
+			else
+			{
+				output += "\n" + "No HTML here " + "\n";
 
+			}
 		}
-		if (isValidHTMLChecker(input))
+		else if (randomMethod == 3)
 		{
-			output += "\n" + isValidHTMLResponse() + "\n";
-		}
-		else
-		{
-			output += "\n" + "No HTML here " + "\n";
+			if (tellGroanJoke(input))
+			{
 
+				output += "\n" + groanJokeResponse() + "\n";
+			}
 		}
-		if (tellGroanJoke(input))
+		else if (randomMethod == 4) 
 		{
-
-			output += "\n" + groanJokeResponse() + "\n";
+			if (tellRandomFact(input))
+			{
+				
+				
+				output += "\n" + funFactList() + "\n";
+				
+			}
 		}
-		if (tellRandomFact(input))
+		else 
 		{
-			
-			
-			output += "\n" + funFactList() + "\n";
-			
+			if (computerScienceChecker(input))
+			{
+				
+				output += "\n" + computerScienceResponse() + "\n"; 
+			}
 		}
-		if (computerScienceChecker(input))
-		{
-			
-			output += "\n" + computerScienceResponse() + "\n"; 
-		}
-
+		
+		output += "\n";
+		int randomTopicIndex = (int) (Math.random() * chatTopics.length);
+		output += chatTopics[randomTopicIndex];
+		
 		return output;
 
 	}
