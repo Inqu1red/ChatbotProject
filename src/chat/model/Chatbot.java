@@ -135,16 +135,17 @@ public class Chatbot
 				{
 					String closingKeyword = phrase.substring(closeTagStartIndex + 2, closeTagEndIndex);
 					
-					int closeTagStart = phrase.indexOf("<" + closingKeyword + ">");
+					int closeTagStart = phrase.indexOf("<" + closingKeyword + ">", openTagEndIndex);
 					int spaceIndex = keyword.indexOf(" ");
 					if(spaceIndex != -1)
 					{
 						keyword = keyword.substring(0,spaceIndex);
-						if(keyword.equals(closingKeyword))
-						{
-							isValid = true;
-						}
 						
+						
+					}
+					if(keyword.equals(closingKeyword))
+					{
+						isValid = true;
 					}
 				}
 			}
