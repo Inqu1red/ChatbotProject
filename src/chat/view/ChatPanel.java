@@ -37,6 +37,7 @@ public class ChatPanel extends JPanel
 	
 	public void setupPanel()
 	{
+		
 		this.setBackground(Color.BLUE);
 		
 	}
