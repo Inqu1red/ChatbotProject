@@ -16,6 +16,8 @@ public class ChatFrame extends JFrame
 		
 		
 		this.app = app;
+		
+		setupFrame();
 	}
 	
 	private void setupFrame()
@@ -27,7 +29,7 @@ public class ChatFrame extends JFrame
 		this.setResizable(false);
 		
 		
-		
+		this.setVisible(true);
 	}
 	
 	

@@ -14,6 +14,7 @@ public class Chatbot
 		this.chatbotName = chatbotName;
 		this.username = "";
 		loadTopics();
+		
 	}
 
 	private void loadTopics()	

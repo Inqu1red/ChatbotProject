@@ -1,11 +1,15 @@
 package chat.controller;
 import chat.model.Chatbot;
-import chat.view.Popup;
+
+import chat.view.*;
+import chat.view.ChatFrame;
+
 import java.util.ArrayList;
 public class Controller
 {
  
 	private Chatbot chatbot;
+	private ChatFrame window;
 	
 	private Popup view;
 	public Controller()
@@ -13,7 +17,7 @@ public class Controller
 		
 		this.chatbot = new Chatbot("Super smart chatbot");
 		this.view = new Popup();
-		
+		this.window = new ChatFrame(this);
 		
 	}
 
