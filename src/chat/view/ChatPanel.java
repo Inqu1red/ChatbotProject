@@ -83,10 +83,32 @@ public class ChatPanel extends JPanel
 	public void setupPanel()
 	{
 		this.setLayout(layout);
-	
-		
-		
 		this.setBackground(new Color (80,200,120));
+		
+		saveLoadPanel.add(saveButton);
+		saveLoadPanel.add(loadButton);
+		
+		chatButtonsPanel.add(spookyButton);
+		chatButtonsPanel.add(HTMLButton);
+		chatButtonsPanel.add(computerScienceButton);
+		chatButtonsPanel.add(groanButton);
+		chatButtonsPanel.add(reversePronounButton);
+		
+		
+		menuPanel.add(chatField);
+		menuPanel.add(chatButtonsPanel);
+		menuPanel.add(chatButton);
+		menuPanel.add(saveLoadPanel);
+		
+		chatPane.setViewportView(chatArea);
+		chatPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		chatPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		chatArea.setEditable(false);
+		
+		this.add(chatPane);
+		this.add(menuPanel);
+		
 		
 	}
 	
