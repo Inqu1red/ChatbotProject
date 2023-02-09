@@ -27,7 +27,7 @@ class PopupTest
 	@BeforeEach
 	void setUp() throws Exception
 	{
-		testedPopup = new Popup(null);
+		testedPopup = new Popup(new chat.view.ChatFrame(null));
 	}
 
 	@AfterEach
