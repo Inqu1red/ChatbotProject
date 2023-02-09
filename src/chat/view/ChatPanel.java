@@ -13,9 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.DefaultComboBoxModel;
 
 import java.awt.GridLayout;
-import java.awt.Label;
 import java.awt.Color;
-import java.awt.Dimension;
+
 import chat.controller.Controller;
 
 
@@ -28,6 +27,8 @@ public class ChatPanel extends JPanel
 	public ChatPanel(Controller app)
 	{
 		super();
+		this.app = app;
+		
 		
 		
 		setupPanel();
