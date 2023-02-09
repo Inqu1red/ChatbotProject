@@ -22,13 +22,37 @@ public class ChatPanel extends JPanel
 {
 
 	private Controller app;
+	private SpringLayout layout;
+	private JButton chatButton;
+	private JButton saveButton;
+	private JButton loadButton;
+	
+	private JButton spookyButton;
+	private JButton computerScienceButton;
+	private JButton groanJokeButton;
+	private JButton randomFactButton;
+	
+	private JButton HTMLButton;
 	
 	
 	public ChatPanel(Controller app)
 	{
 		super();
 		this.app = app;
+		this.layout = layout;
 		
+		
+		this.chatButton = chatButton;
+		this.saveButton = saveButton;
+		this.loadButton = loadButton;
+		
+		
+		this.spookyButton = spookyButton;
+		this.computerScienceButton = computerScienceButton;
+		this.groanJokeButton = groanJokeButton;
+		this.randomFactButton = randomFactButton;
+		
+		this.HTMLButton = HTMLButton;
 		
 		
 		setupPanel();
