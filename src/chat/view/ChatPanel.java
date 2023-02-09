@@ -48,30 +48,30 @@ public class ChatPanel extends JPanel
 	{
 		super();
 		this.app = app;
-		this.layout = layout;
+		this.layout = new SpringLayout();
 		
 		
-		this.chatButton = chatButton;
-		this.saveButton = saveButton;
-		this.loadButton = loadButton;
+		this.chatButton = new JButton("Chat!");
+		this.saveButton = new JButton("Save chats");
+		this.loadButton = new JButton("load chats");
 		
 		
-		this.spookyButton = spookyButton;
-		this.computerScienceButton = computerScienceButton;
-		this.groanButton = groanButton;
-		this.randomFactButton = randomFactButton;
+		this.spookyButton =  new JButton("Spooky");
+		this.computerScienceButton =   new JButton("Talk about cs");;
+		this.groanButton =   new JButton("Tell a dad joke");;
+		this.randomFactButton =   new JButton("Tell a fun fact");;
 		
 		
-		this.HTMLButton = HTMLButton;
-		this.reversePronounButton = reversePronounButton;
+		this.HTMLButton =  new JButton("Check for valid HTML");;
+		this.reversePronounButton =  new JButton("Reverse pronouns");;
 		
-		this.chatButtonsPanel = chatButtonsPanel;
-		this.menuPanel = menuPanel;
-		this.saveLoadPanel = saveLoadPanel;
+		this.chatButtonsPanel = new JPanel(new GridLayout(1, 0));
+		this.menuPanel = new JPanel(new GridLayout(1, 0));
+		this.saveLoadPanel = new JPanel(new GridLayout(1, 0));
 		
-		this.chatField = chatField;
-		this.chatArea = chatArea;
-		this.chatPane = chatPane;
+		this.chatField = new JTextField ("Type here to chat");
+		this.chatArea = new JTextArea();
+		this.chatPane = new JScrollPane();
 		
 		
 		
