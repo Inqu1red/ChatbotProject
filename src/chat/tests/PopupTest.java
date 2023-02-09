@@ -27,7 +27,7 @@ class PopupTest
 	@BeforeEach
 	void setUp() throws Exception
 	{
-		testedPopup = new Popup();
+		testedPopup = new Popup(null);
 	}
 
 	@AfterEach
