@@ -29,10 +29,19 @@ public class ChatPanel extends JPanel
 	
 	private JButton spookyButton;
 	private JButton computerScienceButton;
-	private JButton groanJokeButton;
+	private JButton groanButton;
 	private JButton randomFactButton;
 	
 	private JButton HTMLButton;
+	private JButton reversePronounButton;
+	
+	private JPanel chatButtonsPanel;
+	private JPanel menuPanel;
+	private JPanel saveLoadPanel;
+	
+	private JTextField chatField;
+	private JTextArea chatArea;
+	private JScrollPane chatPane;
 	
 	
 	public ChatPanel(Controller app)
@@ -49,10 +58,21 @@ public class ChatPanel extends JPanel
 		
 		this.spookyButton = spookyButton;
 		this.computerScienceButton = computerScienceButton;
-		this.groanJokeButton = groanJokeButton;
+		this.groanButton = groanButton;
 		this.randomFactButton = randomFactButton;
 		
+		
 		this.HTMLButton = HTMLButton;
+		this.reversePronounButton = reversePronounButton;
+		
+		this.chatButtonsPanel = chatButtonsPanel;
+		this.menuPanel = menuPanel;
+		this.saveLoadPanel = saveLoadPanel;
+		
+		this.chatField = chatField;
+		this.chatArea = chatArea;
+		this.chatPane = chatPane;
+		
 		
 		
 		setupPanel();
@@ -62,9 +82,11 @@ public class ChatPanel extends JPanel
 	
 	public void setupPanel()
 	{
+		this.setLayout(layout);
+	
 		
 		
-		this.setBackground(Color.BLUE);
+		this.setBackground(new Color (80,200,120));
 		
 	}
 	
