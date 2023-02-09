@@ -16,7 +16,7 @@ import java.awt.GridLayout;
 import java.awt.Color;
 
 import chat.controller.Controller;
-
+import chat.model.Chatbot;
 
 public class ChatPanel extends JPanel
 {
@@ -133,7 +133,12 @@ public class ChatPanel extends JPanel
 	public void setupListeners()
 	{
 		
+		
+		
+		
+		
 	}
+	
 	
 	
 	

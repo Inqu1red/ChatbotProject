@@ -33,9 +33,12 @@ public class Chatbot
 		this.chatTopics = new String [] {topicOne, topicTwo, topicThree, topicFour, topicFive, topicSix, topicSeven, topicEight, topicNine, topicTen};
 	}
 	
-	public String processText(String input, int index)
+	public String processText(String input, int choice)
 	{
 		String result = "";
+		
+		
+		
 		
 		
 		return result;
