@@ -64,5 +64,13 @@ public class Controller
 	}
 	
 	
+	public String interactWithChatbot(String text, int index)
+	{
+		String result = "";
+		
+		
+		
+		return result;
+	}
 	
 }
