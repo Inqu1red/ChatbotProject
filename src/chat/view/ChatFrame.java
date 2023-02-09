@@ -26,7 +26,7 @@ public class ChatFrame extends JFrame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Chatbot GUI");
 		this.setSize(1024, 768);
-		this.setResizable(false);
+		this.setResizable(true);
 		
 		
 		this.setVisible(true);

@@ -65,9 +65,9 @@ public class ChatPanel extends JPanel
 		this.HTMLButton =  new JButton("Check for valid HTML");;
 		this.reversePronounButton =  new JButton("Reverse pronouns");;
 		
-		this.chatButtonsPanel = new JPanel(new GridLayout(1, 0));
+		this.chatButtonsPanel = new JPanel(new GridLayout(0, 1));
 		this.menuPanel = new JPanel(new GridLayout(1, 0));
-		this.saveLoadPanel = new JPanel(new GridLayout(1, 0));
+		this.saveLoadPanel = new JPanel(new GridLayout(0, 1));
 		
 		this.chatField = new JTextField ("Type here to chat");
 		this.chatArea = new JTextArea();
