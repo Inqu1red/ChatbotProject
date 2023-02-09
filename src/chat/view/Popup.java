@@ -4,6 +4,14 @@ import javax.swing.JOptionPane;
 public class Popup
 {
 	
+	private ChatFrame window;
+	
+	public Popup(ChatFrame window)
+	{
+		this.window = window;
+		
+	}
+	
 	public void displayMessage(String message)
 	{
 		

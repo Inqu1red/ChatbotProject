@@ -16,14 +16,18 @@ public class Controller
 	{
 		
 		this.chatbot = new Chatbot("Super smart chatbot");
-		this.view = new Popup();
+		this.view = new Popup(window);
 		this.window = new ChatFrame(this);
 		
 	}
 
-	
-	
 	public void start()
+	{
+		
+	}
+	
+	
+	private void oldStart()
 	{
 	
 	
