@@ -133,18 +133,37 @@ public class ChatPanel extends JPanel
 	public void setupListeners()
 	{
 		
+		reversePronounButton.addActionListener(click -> updateDisplay(chatField.getText(), 0));
+		spookyButton.addActionListener(click -> updateDisplay(chatField.getText(), 1));
+		HTMLButton.addActionListener(click -> updateDisplay(chatField.getText(), 2));
+		groanButton.addActionListener(click -> updateDisplay(chatField.getText(), 3));
+		randomFactButton.addActionListener(click -> updateDisplay(chatField.getText(), 4));
+		computerScienceButton.addActionListener(click -> updateDisplay(chatField.getText(), 5));
 		
+		
+		
+		
+		chatField.addActionListener(enterPress -> updateDisplay(chatField.getText(), -9));
+		
+	}
+	
+	
+	private void updateDisplay(String text, int selection)
+	{
+		String displayResponse = app.interactWithChatbot(text, selection);
+		
+		
+		chatArea.append(text + "\n");
+		chatArea.append("\n" + displayResponse + "\n");
+		chatField.setText("");
+		
+		chatArea.setCaretPosition(chatArea.getDocument().getLength()); //every time we add text it will scroll down
 		
 		
 		
 	}
 	
-	
-	
-	
-	
-	
-	
+
 	
 	
 }
