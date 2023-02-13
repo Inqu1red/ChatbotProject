@@ -15,7 +15,7 @@ public class Popup
 	public void displayMessage(String message)
 	{
 		
-		JOptionPane.showMessageDialog(null, message);
+		JOptionPane.showMessageDialog(window, message);
 		
 		
 	}
@@ -24,7 +24,7 @@ public class Popup
 	{
 		String response = "";
 		
-		response = JOptionPane.showInputDialog(null, question);
+		response = JOptionPane.showInputDialog(window, question);
 		
 		
 		if (response == null)

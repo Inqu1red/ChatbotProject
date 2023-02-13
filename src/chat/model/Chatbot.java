@@ -35,13 +35,60 @@ public class Chatbot
 	
 	public String processText(String input, int choice)
 	{
-		String result = "";
+		String output = "";
 		
+		if (choice == 0)
+		{
+			output = reversePronounDirection(input);
+		}
+		else if (choice == 1)
+		{
+			if (spookyChecker(input))
+			{
+				output += "\n" + spookyResponse() + "\n";
+
+			}
+		}
+		else if (choice == 2)
+		{
+			if (isValidHTMLChecker(input))
+			{
+				output += "\n" + isValidHTMLResponse() + "\n";
+			}
+			else
+			{
+				output += "\n" + "No HTML here " + "\n";
+
+			}
+		}
+		else if (choice == 3)
+		{
+			if (tellGroanJoke(input))
+			{
+
+				output += "\n" + groanJokeResponse() + "\n";
+			}
+		}
+		else if (choice == 4)
+		{
+			if (tellRandomFact(input))
+			{
+				
+				
+				output += "\n" + funFactList() + "\n";
+				
+			}
+		}
+		else if (choice == 5)
+		{
+			if (computerScienceChecker(input))
+			{
+				
+				output += "\n" + computerScienceResponse() + "\n"; 
+			}
+		}
 		
-		
-		
-		
-		return result;
+		return output;
 	}
 	
 	public String processText(String input)
