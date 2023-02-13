@@ -33,7 +33,7 @@ public class Chatbot
 		this.chatTopics = new String [] {topicOne, topicTwo, topicThree, topicFour, topicFive, topicSix, topicSeven, topicEight, topicNine, topicTen};
 	}
 	
-	public String processText(String input, int choice)
+	public String processText(String input, int choice) //uses input to decide instead of random numbers
 	{
 		String output = "";
 		
@@ -87,9 +87,14 @@ public class Chatbot
 				output += "\n" + computerScienceResponse() + "\n"; 
 			}
 		}
+		output += "\n";
+		int randomTopicIndex = (int) (Math.random() * chatTopics.length);
+		output += chatTopics[randomTopicIndex];
 		
 		return output;
 	}
+	
+	
 	
 	public String processText(String input)
 
