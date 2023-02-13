@@ -142,7 +142,7 @@ public class ChatPanel extends JPanel
 		
 		
 		
-		
+		chatButton.addActionListener(click -> updateDisplay(chatField.getText(), -9));
 		chatField.addActionListener(enterPress -> updateDisplay(chatField.getText(), -9));
 		
 	}

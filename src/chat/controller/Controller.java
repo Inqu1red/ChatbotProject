@@ -69,7 +69,7 @@ public class Controller
 	{
 		String result = "";
 		
-		
+		result = chatbot.processText(text, index);
 		
 		return result;
 	}
