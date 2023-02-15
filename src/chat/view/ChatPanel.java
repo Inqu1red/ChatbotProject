@@ -54,7 +54,7 @@ public class ChatPanel extends JPanel
 		
 		this.chatButton = new JButton("Chat!");
 		this.saveButton = new JButton("Save chats");
-		this.loadButton = new JButton("load chats");
+		this.loadButton = new JButton("Load chats");
 		
 		
 		this.spookyButton =  new JButton("Spooky");
