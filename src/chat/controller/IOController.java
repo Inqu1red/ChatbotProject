@@ -23,9 +23,9 @@ public class IOController
 		return contents;
 	}
 	
-	public static void saveTextToFile(Controller app, String path, String textToSave)
+	
+	public static String buildFileName(String path)
 	{
-		
 		String fileName = path;
 		
 		LocalDateTime current = LocalDateTime.now(); //gets the local time at the time its used, factory method that gets information for me that is more secure
@@ -48,6 +48,19 @@ public class IOController
 		
 		fileName += " " + current.getHour() + "-" + minutes ;
 		fileName += ".txt";
+		
+		
+		
+		return fileName;
+	}
+	
+	
+	public static void saveTextToFile(Controller app, String path, String textToSave)
+	{
+		
+		String fileName = buildFileName(path);
+		
+		
 		
 		try (Scanner textScanner = new Scanner(textToSave);
 				PrintWriter textWriter = new PrintWriter(fileName))
