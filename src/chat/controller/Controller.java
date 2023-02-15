@@ -74,4 +74,11 @@ public class Controller
 		return result;
 	}
 	
+
+
+	public void handleError(Exception error)
+	{
+		view.displayMessage(error.getMessage());
+	}
+
 }
