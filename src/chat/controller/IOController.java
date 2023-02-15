@@ -49,6 +49,18 @@ public class IOController
 		fileName += " " + current.getHour() + "-" + minutes ;
 		fileName += ".txt";
 		
+		try (Scanner textScanner = new Scanner(textToSave);
+				PrintWriter textWrite = new PrintWriter(fileName))
+		{
+		
+		}
+		
+		catch (IOException error)
+		{
+			app.handleError(error);
+			
+		}
+		
 	}
 	
 	
