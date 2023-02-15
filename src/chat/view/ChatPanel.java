@@ -195,6 +195,29 @@ public class ChatPanel extends JPanel
 		
 		return path;
 	}
-	
+
+	private void save()
+	{
+		
+		String path = getPath("save");
+		String text = chatArea.getText();
+		
+		app.save(path, text);
+		chatArea.setText("Chat has been saved");
+		
+	}
+
+	private void load()	
+	{
+		String path = getPath("load");
+		
+		String text = app.load(path);
+		
+		chatArea.setText(text);
+		
+		
+		
+		
+	}
 	
 }
