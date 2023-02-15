@@ -60,8 +60,6 @@ public class IOController
 		
 		String fileName = buildFileName(path);
 		
-		
-		
 		try (Scanner textScanner = new Scanner(textToSave);
 				PrintWriter textWriter = new PrintWriter(fileName))
 		{
@@ -81,6 +79,5 @@ public class IOController
 		}
 		
 	}
-	
 	
 }
