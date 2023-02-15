@@ -81,4 +81,23 @@ public class Controller
 		view.displayMessage(error.getMessage());
 	}
 
+	
+	public String load(String fileName)
+	{
+		String contents = IOController.loadTextFromFile(this, fileName);
+		
+		
+		
+		
+		return contents;
+	}
+	
+	public void save(String path, String contents)
+	{
+		IOController.saveTextToFile(this, path, contents);
+		
+	}
+	
+	
+	
 }
