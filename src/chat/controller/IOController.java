@@ -2,8 +2,10 @@ package chat.controller;
 
 import java.util.Scanner;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.FileNotFoundException;
 
 import java.time.LocalDateTime;
 
@@ -15,9 +17,23 @@ public class IOController
 	public static String loadTextFromFile(Controller app, String pathAndFileName)
 	{
 		String contents = "";
+		File source = new File(pathAndFileName);
+		try (Scanner textScanner = new Scanner(source))
+		{
+			
+			while (textScanner.hasNextLine())
+			{
+				contents += textScanner.nextLine() + "\n";
+			}
+				
+			
+		}
 		
-		
-		
+		catch (FileNotFoundException error)
+		{
+			app.handleError(error);
+			contents += "No text to load";
+		}
 		
 		
 		return contents;
