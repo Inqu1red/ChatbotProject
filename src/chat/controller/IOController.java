@@ -50,8 +50,14 @@ public class IOController
 		fileName += ".txt";
 		
 		try (Scanner textScanner = new Scanner(textToSave);
-				PrintWriter textWrite = new PrintWriter(fileName))
+				PrintWriter textWriter = new PrintWriter(fileName))
 		{
+		while (textScanner.hasNextLine())
+		{
+			String line = textScanner.nextLine();
+			textWriter.println(line);
+			
+		}
 		
 		}
 		
