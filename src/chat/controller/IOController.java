@@ -11,4 +11,22 @@ import java.time.LocalDateTime;
 public class IOController
 {
 
+	
+	public static String loadTextFromFile(Controller app, String pathAndFileName)
+	{
+		String contents = "";
+		
+		
+		
+		
+		
+		return contents;
+	}
+	
+	public static void saveTextToFile(Controller app, String path, String textToSave)
+	{
+		
+	}
+	
+	
 }
