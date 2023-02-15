@@ -1,6 +1,7 @@
 package chat.view;
 
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 import javax.swing.JTextField;
@@ -163,7 +164,37 @@ public class ChatPanel extends JPanel
 		
 	}
 	
-
+	private String getPath(String type)
+	{
+		String path = ".";
+		
+		JFileChooser fileChooser = new JFileChooser();
+		
+		
+		if (type.equals("save"))
+		{
+			
+			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getCurrentDirectory().getAbsolutePath();
+				
+			}
+			
+		}
+		else if (type.equals("load"))
+		{
+			
+			if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getSelectedFile().getAbsolutePath();
+			}
+			
+		}
+		
+		
+		return path;
+	}
 	
 	
 }
